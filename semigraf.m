@@ -39,9 +39,9 @@ load dataPolje
 if(exist ("izracunanoPolje", "var") == 0)
   disp " polje še ni poračunano"
 endif
-A0  = 1;
+A0  = 0;
 A1  = 0;
-A   = 0;
+A   = 1;
 row = A0 + A1 + A;
 
 figure('Position',[startx,starty,width,height]);	% odpremo okno
@@ -174,7 +174,7 @@ endif
 if(sile)
 load dataSile
 global dataL1 dataL2 dataMM
-kF      = 1; %1e7;
+kF      = 1e8;
 N       = numel(ArrWm);
 Fz(N)   = 0;
 ArrWm   = kF.*ArrWm;

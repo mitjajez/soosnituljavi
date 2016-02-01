@@ -62,7 +62,7 @@ function A0 = A0L(T, data)
 
   if r > 0                          % A0(r=0) = 0
     for n = 1:NN;                   % po vseh zankah
-    Ri = RR(n);   Zi = ZZ(n);
+      Ri = RR(n);   Zi = ZZ(n);
       t = sqrt( (Ri-r)^2 + (Zi-z)^2 ); 
       if(t <= Rz)                   %str 199
         A0 += (log(8*Ri/Rz) - 2) + 0.5*(1 - (t/Rz)^2);
@@ -123,8 +123,8 @@ function B0 = B0L(T, data)
 
   B0  = zeros(3,1);
   for n = 1:NN;                   % po vseh zankah
-  Ri = RR(n);   Zi = ZZ(n);
-      B0 += zanka(T, Ri,Zi, d, 1);  % Izracun B0 v valjnem KS (r,z)
+    Ri = RR(n);   Zi = ZZ(n);
+    B0 += zanka(T, Ri,Zi, d, 1);  % Izracun B0 v valjnem KS (r,z)
   endfor
   B0 = I*B0;                        % tok v vsaki zanki
 endfunction
